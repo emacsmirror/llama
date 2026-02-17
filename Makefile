@@ -16,9 +16,7 @@ LOAD_PATH ?= $(addprefix -L ../,$(DEPS))
 LOAD_PATH += -L .
 
 EMACS       ?= emacs
-EMACS_ARGS ?= --eval "(progn \
-  (put 'if-let 'byte-obsolete-info nil) \
-  (put 'when-let 'byte-obsolete-info nil))"
+EMACS_ARGS  ?=
 EMACS_Q_ARG ?= -Q
 EMACS_BATCH ?= $(EMACS) $(EMACS_Q_ARG) --batch $(EMACS_ARGS) $(LOAD_PATH)
 
